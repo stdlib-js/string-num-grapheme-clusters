@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/string-num-grapheme-clusters",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Return the number of grapheme clusters in a string.",
   "license": "Apache-2.0",
   "author": {
