@@ -150,6 +150,22 @@ $ echo -n 'beep\nboop🌷' | num-grapheme-clusters -l
 
 <!-- /.cli -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/string/next-grapheme-cluster-break`][@stdlib/string/next-grapheme-cluster-break]: return the next extended grapheme cluster break in a string after a specified position.
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 
 <section class="main-repo" >
 
@@ -208,6 +224,12 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [unicode-text-segmentation]: http://www.unicode.org/reports/tr29/
 
 [standard-streams]: https://en.wikipedia.org/wiki/Standard_streams
+
+<!-- <related-links> -->
+
+[@stdlib/string/next-grapheme-cluster-break]: https://github.com/stdlib-js/string-next-grapheme-cluster-break
+
+<!-- </related-links> -->
 
 </section>
 
