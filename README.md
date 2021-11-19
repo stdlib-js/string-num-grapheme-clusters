@@ -20,7 +20,7 @@ limitations under the License.
 
 # numGraphemeClusters
 
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] [![dependencies][dependencies-image]][dependencies-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > Return the number of [grapheme clusters][unicode-text-segmentation] in a string.
 
@@ -158,7 +158,7 @@ $ echo -n 'beep\nboop🌷' | num-grapheme-clusters -l
 
 ## See Also
 
--   [`@stdlib/string/next-grapheme-cluster-break`][@stdlib/string/next-grapheme-cluster-break]: return the next extended grapheme cluster break in a string after a specified position.
+-   <span class="package-name">[`@stdlib/string/next-grapheme-cluster-break`][@stdlib/string/next-grapheme-cluster-break]</span><span class="delimiter">: </span><span class="description">return the next extended grapheme cluster break in a string after a specified position.</span>
 
 </section>
 
@@ -209,8 +209,12 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-num-grapheme-clusters/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/string-num-grapheme-clusters?branch=main
 
+<!--
+
 [dependencies-image]: https://img.shields.io/david/stdlib-js/string-num-grapheme-clusters.svg
 [dependencies-url]: https://david-dm.org/stdlib-js/string-num-grapheme-clusters/main
+
+-->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
 [chat-url]: https://gitter.im/stdlib-js/stdlib/
