@@ -24,14 +24,31 @@ limitations under the License.
 
 > Return the number of [grapheme clusters][unicode-text-segmentation] in a string.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/string-num-grapheme-clusters
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import numGraphemeClusters from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-num-grapheme-clusters@deno/mod.js';
+var numGraphemeClusters = require( '@stdlib/string-num-grapheme-clusters' );
 ```
 
 #### numGraphemeClusters( str )
@@ -57,7 +74,7 @@ out = numGraphemeClusters( 'Hidden Treasures' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import numGraphemeClusters from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-num-grapheme-clusters@deno/mod.js';
+var numGraphemeClusters = require( '@stdlib/string-num-grapheme-clusters' );
 
 var str = numGraphemeClusters( 'last man standing' );
 // returns 17
@@ -76,7 +93,73 @@ str = numGraphemeClusters( '🌷' );
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/string-num-grapheme-clusters-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: num-grapheme-clusters [options] [<string>]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+  -l,    --lines               Analyze individual lines.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ num-grapheme-clusters beep
+4
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n 'beep\nboop🌷' | num-grapheme-clusters
+10
+```
+
+```bash
+$ echo -n 'beep\nboop🌷' | num-grapheme-clusters -l
+4
+5
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -101,7 +184,7 @@ str = numGraphemeClusters( '🌷' );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -145,7 +228,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -171,7 +254,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/string/next-grapheme-cluster-break]: https://github.com/stdlib-js/string-next-grapheme-cluster-break/tree/deno
+[@stdlib/string/next-grapheme-cluster-break]: https://github.com/stdlib-js/string-next-grapheme-cluster-break
 
 <!-- </related-links> -->
 
