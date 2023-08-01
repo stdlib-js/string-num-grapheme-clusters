@@ -24,38 +24,31 @@ limitations under the License.
 
 > Return the number of [grapheme clusters][unicode-text-segmentation] in a string.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/string-num-grapheme-clusters
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-numGraphemeClusters = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/string-num-grapheme-clusters@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var numGraphemeClusters = require( 'path/to/vendor/umd/string-num-grapheme-clusters/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-num-grapheme-clusters@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.numGraphemeClusters;
-})();
-</script>
+var numGraphemeClusters = require( '@stdlib/string-num-grapheme-clusters' );
 ```
 
 #### numGraphemeClusters( str )
@@ -80,13 +73,8 @@ out = numGraphemeClusters( 'Hidden Treasures' );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-num-grapheme-clusters@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var numGraphemeClusters = require( '@stdlib/string-num-grapheme-clusters' );
 
 var str = numGraphemeClusters( 'last man standing' );
 // returns 17
@@ -99,18 +87,79 @@ str = numGraphemeClusters( 'अनुच्छेद' );
 
 str = numGraphemeClusters( '🌷' );
 // returns 1
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/string-num-grapheme-clusters-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: num-grapheme-clusters [options] [<string>]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+  -l,    --lines               Analyze individual lines.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ num-grapheme-clusters beep
+4
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n 'beep\nboop🌷' | num-grapheme-clusters
+10
+```
+
+```bash
+$ echo -n 'beep\nboop🌷' | num-grapheme-clusters -l
+4
+5
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -205,7 +254,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/string/next-grapheme-cluster-break]: https://github.com/stdlib-js/string-next-grapheme-cluster-break/tree/umd
+[@stdlib/string/next-grapheme-cluster-break]: https://github.com/stdlib-js/string-next-grapheme-cluster-break
 
 <!-- </related-links> -->
 
