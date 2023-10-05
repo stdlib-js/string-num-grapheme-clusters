@@ -26,7 +26,7 @@ var numGraphemeClusters = require( './../../dist' );
 
 // FIXTURES //
 
-var fixtures = require( './../..xtures/test_data.json' );
+var fixtures = require( './../fixtures/test_data.json' );
 
 
 // TESTS //
