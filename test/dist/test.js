@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2020 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,81 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var numGraphemeClusters = require( './../../dist' );
-
-
-// FIXTURES //
-
-var fixtures = require( './../fixtures/test_data.json' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof numGraphemeClusters, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function throws an error if not provided a string', function test( t ) {
-	var values;
-	var i;
-
-	values = [
-		5,
-		null,
-		true,
-		void 0,
-		NaN,
-		[],
-		{},
-		function noop() {}
-	];
-
-	for ( i = 0; i < values.length; i++ ) {
-		t.throws( badValue( values[i] ), TypeError, 'throws an error when provided '+values[i] );
-	}
-	t.end();
-
-	function badValue( value ) {
-		return function badValue() {
-			numGraphemeClusters( value );
-		};
-	}
-});
-
-tape( 'the function returns 0 if provided an empty string', function test( t ) {
-	t.strictEqual( numGraphemeClusters( '' ), 0, 'returns expected value' );
-	t.end();
-});
-
-tape( 'the function returns the Unicode aware length of a provided string', function test( t ) {
-	var out;
-
-	out = numGraphemeClusters( 'hello world' );
-	t.strictEqual( out, 11, 'returns expected value' );
-
-	out = numGraphemeClusters( '!!!' );
-	t.strictEqual( out, 3, 'returns expected value' );
-
-	out = numGraphemeClusters( 'अनुच्छेद' );
-	t.strictEqual( out, 5, 'returns expected value' );
-
-	out = numGraphemeClusters( '🌷' );
-	t.strictEqual( out, 1, 'returns expected value' );
-
-	t.end();
-});
-
-tape( 'the function returns the number of grapheme clusters (Unicode 13 test cases)', function test( t ) {
-	var actual;
-	var d;
-	var i;
-
-	for ( i = 0; i < fixtures.length; i++ ) {
-		d = fixtures[ i ];
-		actual = numGraphemeClusters( d.input );
-		t.strictEqual( actual, d.expected.length, 'returns expected value. Index: '+i+'. Input: '+d.input+'. Actual: '+actual+'. Expected: '+d.expected.length+'.' );
-	}
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
