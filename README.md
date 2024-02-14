@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import numGraphemeClusters from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-num-grapheme-clusters@esm/index.mjs';
+import numGraphemeClusters from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-num-grapheme-clusters@v0.2.0-esm/index.mjs';
 ```
 
 #### numGraphemeClusters( str )
@@ -73,7 +73,7 @@ out = numGraphemeClusters( 'Hidden Treasures' );
 <body>
 <script type="module">
 
-import numGraphemeClusters from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-num-grapheme-clusters@esm/index.mjs';
+import numGraphemeClusters from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-num-grapheme-clusters@v0.2.0-esm/index.mjs';
 
 var str = numGraphemeClusters( 'last man standing' );
 // returns 17
